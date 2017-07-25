@@ -3,7 +3,7 @@
 #
 
 
-FROM ivision/opencv3 AS tensorflow-opencv3
+FROM ivision/opencv3
 
 # Pick up some TF dependencies
 RUN apt-get update && apt-get install -y --no-install-recommends \
@@ -31,16 +31,7 @@ RUN pip --no-cache-dir install \
         	pandas \
         	scipy \
         	sklearn \
-			os \
-			glob \
-			random \
-			math \
-			time \
-			datetime
-
-# Install TensorFlow GPU version.
-RUN pip --no-cache-dir install \
-    http://storage.googleapis.com/tensorflow/linux/gpu/tensorflow_gpu-0.0.0-cp27-none-linux_x86_64.whl
+		   tensorflow
 
 
 WORKDIR "/notebooks"
