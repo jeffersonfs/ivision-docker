@@ -16,6 +16,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         rsync \
         software-properties-common \
         unzip \
+		  python-tk \
         && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
