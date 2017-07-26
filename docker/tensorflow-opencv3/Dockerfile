@@ -32,7 +32,7 @@ RUN pip --no-cache-dir install \
         	pandas \
         	scipy \
         	sklearn \
-		   tensorflow
+		   tensorflow-gpu
 
 
 WORKDIR "/notebooks"
