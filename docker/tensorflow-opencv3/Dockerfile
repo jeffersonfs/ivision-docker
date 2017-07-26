@@ -1,5 +1,5 @@
 #
-# TENSORFLOW GPU ON UBUNTU_16 + PYTHON_2.7 + OPENCV_3.2 + CAFFE_LAST
+# TENSORFLOW GPU ON UBUNTU_16 + PYTHON_2.7 + OPENCV_3.2
 #
 
 
@@ -36,6 +36,3 @@ RUN pip --no-cache-dir install \
 
 
 WORKDIR "/notebooks"
-
-
-
