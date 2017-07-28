@@ -34,6 +34,7 @@ RUN pip --no-cache-dir install \
 			scipy \
 			sklearn \
 			scikit-learn \
+			scikit-image \
 			tensorflow-gpu
 
 
