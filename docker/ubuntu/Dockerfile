@@ -67,6 +67,7 @@ RUN set -ex; \
 		xz-utils \
 		zlib1g-dev \
 		wget \
+		libboost1.58-all-dev \
 		\
 # https://lists.debian.org/debian-devel-announce/2016/09/msg00000.html
 		$( \
