@@ -17,6 +17,11 @@ RUN	apt-get update && apt-get install -y --no-install-recommends \
 			software-properties-common \
 			unzip \
 			python-tk \
+			libboost1.58-all-dev \
+			libcanberra-gtk-module \
+			libcanberra-gtk3-module \
+			libcupti-dev \
+			libcudnn7-dev \
 			&& \
 		apt-get clean && \
 		rm -rf /var/lib/apt/lists/*
@@ -35,6 +40,7 @@ RUN pip --no-cache-dir install \
 			sklearn \
 			scikit-learn \
 			scikit-image \
+			PIL \
 			Image \
 			tensorflow-gpu
 
