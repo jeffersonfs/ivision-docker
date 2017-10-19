@@ -8,9 +8,9 @@ ENV NUM_CORES 8
 RUN apt-get -y update && apt-get install -y --no-install-recommends python$PYTHON_VERSION-dev wget unzip python-setuptools \
                        build-essential cmake git pkg-config libatlas-base-dev gfortran \
                        libjasper-dev libgtk2.0-dev libavcodec-dev libavformat-dev \
-                       libswscale-dev libjpeg-dev libpng-dev libtiff-dev libjasper-dev libv4l-dev \
+                       libswscale-dev libjpeg-dev libpng-dev libtiff-dev libjasper-dev libv4l-dev python-pip \
 			&& rm -rf /var/lib/apt/lists/*
-
+RUN pip install --upgrade pip
 RUN pip install numpy matplotlib
 
 RUN git clone https://github.com/opencv/opencv_contrib.git
@@ -42,4 +42,5 @@ RUN cmake -D CMAKE_BUILD_TYPE=RELEASE \
 RUN make -j$NUM_CORES
 RUN make install
 RUN ldconfig
+RUN cd ../../ && rm -R /opt/opencv
 
