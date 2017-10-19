@@ -2,7 +2,7 @@ FROM ivision/ubuntu
 
 #3.4.3
 ENV PYTHON_VERSION 2.7
-ENV NUM_CORES 4
+ENV NUM_CORES 8
 
 # Install OpenCV 3.0
 RUN apt-get -y update && apt-get install -y --no-install-recommends python$PYTHON_VERSION-dev wget unzip python-setuptools \
