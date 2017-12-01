@@ -3,7 +3,7 @@
 #
 
 
-FROM ivision/opencv3-cudnn6
+FROM ivision/opencv3
 
 # Pick up some TF dependencies
 RUN	apt-get update && apt-get install -y --no-install-recommends \
@@ -17,11 +17,6 @@ RUN	apt-get update && apt-get install -y --no-install-recommends \
 			software-properties-common \
 			unzip \
 			python-tk \
-			libboost1.58-all-dev \
-			libcanberra-gtk-module \
-			libcanberra-gtk3-module \
-			libcupti-dev \
-			libcudnn7-dev \
 			&& \
 		apt-get clean && \
 		rm -rf /var/lib/apt/lists/*
@@ -30,6 +25,17 @@ RUN	apt-get update && apt-get install -y --no-install-recommends \
 RUN pip --no-cache-dir install \
 			--upgrade pip \
 			Pillow \
+<<<<<<< HEAD
+        	h5py \
+        	ipykernel \
+        	jupyter \
+        	matplotlib \
+        	numpy \
+        	pandas \
+        	scipy \
+        	sklearn \
+		tensorflow
+=======
 			h5py \
 			ipykernel \
 			jupyter \
@@ -40,8 +46,8 @@ RUN pip --no-cache-dir install \
 			sklearn \
 			scikit-learn \
 			scikit-image \
-			Image \
 			tensorflow-gpu
+>>>>>>> 23c3f85833f5621ee2a92a6817ea64e5726b1c5a
 
 
 WORKDIR "/notebooks"

@@ -1,4 +1,4 @@
-FROM ivision/python
+FROM ivision/python-cudnn6
 
 #3.4.3
 ENV PYTHON_VERSION 2.7
