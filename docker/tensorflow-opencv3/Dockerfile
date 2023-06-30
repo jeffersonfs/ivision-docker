@@ -3,7 +3,7 @@
 #
 
 
-FROM ivision/opencv3-cudnn6
+FROM tensorflow/tensorflow:latest-gpu-py3-jupyter
 
 # Pick up some TF dependencies
 RUN	apt-get update && apt-get install -y --no-install-recommends \
@@ -41,7 +41,5 @@ RUN pip --no-cache-dir install \
 			scikit-learn \
 			scikit-image \
 			Image \
-			tensorflow-gpu
-
 
 WORKDIR "/notebooks"
