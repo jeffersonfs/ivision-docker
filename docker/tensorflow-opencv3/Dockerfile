@@ -21,7 +21,6 @@ RUN	apt-get update && apt-get install -y --no-install-recommends \
 			libcanberra-gtk-module \
 			libcanberra-gtk3-module \
 			libcupti-dev \
-			libcudnn7-dev \
 			&& \
 		apt-get clean && \
 		rm -rf /var/lib/apt/lists/*
